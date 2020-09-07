@@ -2,8 +2,12 @@
 using BepInEx;
 using HarmonyLib;
 using MonsterTrainModdingAPI.Interfaces;
+using $safeprojectname$.Cards;
+using $safeprojectname$.Champions;
+using $safeprojectname$.Characters;
+using $safeprojectname$.Clan;
 
-namespace $safeprojectname$
+namespace $projectname$
 {
     [BepInPlugin(MODGUID, MODNAME, VERSION)]
     [BepInProcess("MonsterTrain.exe")]
@@ -14,10 +18,26 @@ namespace $safeprojectname$
         public const string MODGUID = "domain.username.modname";
         public const string MODNAME = "modname";
         public const string VERSION = "0.0";
+        public static ClassData clanARef;
         public void Initialize()
         {
             var harmony = new Harmony(MODGUID);
             harmony.PatchAll();
+
+        }
+        public void MakeClan()
+        {
+            clanARef = ClanA.MakeClan();
+        }
+        public void MakeCards()
+        {
+            CardA.Make();
+            CharacterA.Make();
+        }
+        public void MakeChampions()
+        {
+            ChampionA.Make();
+            ChampionB.Make();
         }
     }
 }

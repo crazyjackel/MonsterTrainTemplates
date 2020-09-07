@@ -3,18 +3,19 @@ using System.Collections.Generic;
 using System.Text;
 using MonsterTrainModdingAPI.Builders;
 
-namespace $rootnamespace$
+namespace MonsterTrainClanProjectTemplate2
 {
-    class $safeitemrootname$
+    class ChampionA
     {
-        public static string ID = "MODNAME_$safeitemrootname$";
+        public const string ID = "MODNAME_ChampionA";
         public static CardData Make()
         {
             ChampionCardDataBuilder championCardDataBuilder = new ChampionCardDataBuilder
             {
                 CardID = ID,
                 Champion = GetCharacterDataBuilder(),
-                UpgradeTree = GetUpgradeTreeDataBuilder()
+                UpgradeTree = GetUpgradeTreeDataBuilder(),
+                LinkedClass = Plugin.clanARef
             };
             return championCardDataBuilder.BuildAndRegister();
         }

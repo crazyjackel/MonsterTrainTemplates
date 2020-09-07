@@ -3,16 +3,16 @@ using System.Collections.Generic;
 using System.Text;
 using MonsterTrainModdingAPI.Builders;
 
-namespace $rootnamespace$
+namespace $safeprojectname$.Clan
 {
-    class $safeitemrootname$
+    class ClanA
     {
         public const string ID = "MODNAME";
         public static ClassData MakeClan()
         {
             ClassDataBuilder classDataBuilder = new ClassDataBuilder
             {
-                ClassID = ID
+                ClassID = ID,
             };
             return classDataBuilder.BuildAndRegister();
         }
