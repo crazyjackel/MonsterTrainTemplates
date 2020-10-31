@@ -1,7 +1,7 @@
 ﻿using System;
 using BepInEx;
 using HarmonyLib;
-using MonsterTrainModdingAPI.Interfaces;
+using Trainworks.Interfaces;
 
 namespace $safeprojectname$
 {
